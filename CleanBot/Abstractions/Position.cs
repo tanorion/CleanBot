@@ -11,7 +11,16 @@ namespace Abstractions
             X = x;
             Y = y;
         }
-        public int X { get; }
-        public int Y { get; }
+
+        public void MoveX(int value)
+        {
+            X += value;
+        }
+        public void MoveY(int value)
+        {
+            Y += value;
+        }
+        public int X { get; private set; }
+        public int Y { get; private set; }
     }
 }

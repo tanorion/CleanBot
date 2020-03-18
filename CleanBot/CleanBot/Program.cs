@@ -11,6 +11,10 @@ namespace CleanBot
         {
             var serviceProvider = new ServiceCollection()
                 .AddLogging()
+                .AddTransient<IConsoleWrapper, ConsoleWrapper>()
+                .AddTransient<IInstructor, ConsoleInstructor>()
+                .AddTransient<ICleaningBot, CleaningBot>()
+                .AddTransient<ICleaningService, CleaningService>()
                 .BuildServiceProvider();
 
             //configure console logging

@@ -49,6 +49,7 @@ namespace CleanBot.Tests
         }
 
         [RunnableInDebugOnlyAttribute]
+        //worst case scenario will take atleast approximately 75gig of memory, think of that before running!
         public void cleaning_bot_should_work_in_wost_case_scenario()
         {
             var bot = new CleaningBot(Mock.Of<ILogger<CleaningBot>>());

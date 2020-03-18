@@ -5,5 +5,6 @@ namespace Abstractions
     public interface ICleaningService
     {
         void Clean();
+        long GetTilesCleaned();
     }
 }

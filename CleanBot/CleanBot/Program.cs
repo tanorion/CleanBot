@@ -23,9 +23,9 @@ namespace CleanBot
             logger.LogDebug("Starting application");
 
             //do the actual work here
-            var bar = serviceProvider.GetService<ICleaningService>();
-            bar.Clean();
-
+            var cleaningService = serviceProvider.GetService<ICleaningService>();
+            cleaningService.Clean();
+            Console.WriteLine($"Cleaned: {cleaningService.GetTilesCleaned()}");
             logger.LogDebug("All is clean");
 
         }

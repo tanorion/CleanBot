@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Abstractions
 {
-    public class Position
+    public class Position : IEquatable<Position>
     {
         public Position(int x, int y)
         {
@@ -22,5 +22,9 @@ namespace Abstractions
         }
         public int X { get; private set; }
         public int Y { get; private set; }
+        public bool Equals(Position other)
+        {
+            return other.X == X && other.Y == Y;
+        }
     }
 }

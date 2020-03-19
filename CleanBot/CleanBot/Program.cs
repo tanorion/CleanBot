@@ -13,7 +13,7 @@ namespace CleanBot
                 .AddLogging()
                 .AddTransient<IConsoleWrapper, ConsoleWrapper>()
                 .AddTransient<IInstructor, ConsoleInstructor>()
-                .AddTransient<ICleaningBot, CleaningBot>()
+                .AddTransient<ICleaningBot, CleaningBotVector>()
                 .AddTransient<ICleaningService, CleaningService>()
                 .BuildServiceProvider();
 
